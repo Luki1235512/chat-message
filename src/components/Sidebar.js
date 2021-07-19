@@ -7,6 +7,7 @@ import AddIcon from '@material-ui/icons/Add';
 import {Avatar} from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/userSlice';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import db, { auth } from './firebase';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -58,14 +59,15 @@ function Sidebar() {
         </div>
 
         <div className="sidebar__profile">
-            <Avatar onClick={() => auth.signOut()} src={user.photo} />
+            <Avatar src={user.photo} />
             <div className="sidebar__profileInfo">
                 <h3>{user.displayName}</h3>
                 <p>#{user.uid.substring(0, 5)}</p>
             </div>
 
             <div className="sidebar__profileIcons">
-                <SettingsIcon />
+                <ExitToAppIcon onClick={() => auth.signOut()} />
+                {/* <SettingsIcon /> */}
             </div>
         </div>
     </div>

@@ -64,3 +64,11 @@
 .sidebar__profileInfo > .MuiSvgIcon-root {
     padding: 10px;
 }
+
+.sidebar__profileIcons {
+    cursor: pointer;
+}
+
+.sidebar__profileIcons > .MuiSvgIcon-root {
+    padding: 10px;
+}
